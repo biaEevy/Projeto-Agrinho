@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Campo à Cidade: Colhendo Oportunidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Do Campo à Cidade: Colhendo Oportunidades</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#journey">A Jornada</a></li>
+                    <li><a href="#opportunities">Oportunidades</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Uma Jornada de Transformação</h2>
+                <p>Descubra como a transição do campo para a cidade pode abrir novas oportunidades e desafios.</p>
+                <button onclick="location.href='#journey'">Explorar</button>
+            </div>
+        </section>
+        <section id="journey" class="journey">
+            <div class="container">
+                <h2>A Jornada</h2>
+                <div class="journey-cards">
+                    <div class="card" onclick="openModal('campo.jpg', 'Vida no Campo', 'A tranquilidade e a simplicidade da vida rural, onde tudo é mais próximo da natureza e da comunidade.')">
+                        <img src="imagens/campo.jpg" alt="Vida no campo">
+                        <h3>Vida no Campo</h3>
+                        <p>A tranquilidade e a simplicidade da vida rural, onde tudo é mais próximo da natureza e da comunidade.</p>
+                    </div>
+                    <div class="card" onclick="openModal('transicao.jpg', 'Transição', 'Os desafios e as adaptações necessárias para a mudança, incluindo aspectos culturais, sociais e econômicos.')">
+                        <img src="imagens/transicao.jpg" alt="Transição para a cidade">
+                        <h3>Transição</h3>
+                        <p>Os desafios e as adaptações necessárias para a mudança, incluindo aspectos culturais, sociais e econômicos.</p>
+                    </div>
+                    <div class="card" onclick="openModal('cidade.jpg', 'Vida na Cidade', 'As novas oportunidades e o dinamismo da vida urbana, oferecendo acesso a educação, emprego e inovação.')">
+                        <img src="imagens/cidade.jpg" alt="Oportunidades na cidade">
+                        <h3>Vida na Cidade</h3>
+                        <p>As novas oportunidades e o dinamismo da vida urbana, oferecendo acesso a educação, emprego e inovação.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="opportunities" class="opportunities">
+            <div class="container">
+                <h2>Oportunidades</h2>
+                <p>A cidade oferece uma variedade de oportunidades que podem transformar vidas, desde educação de qualidade até novas carreiras.</p>
+                <ul>
+                    <li>Educação: Acesso a escolas, universidades e cursos profissionalizantes.</li>
+                    <li>Emprego: Diversas opções de trabalho e crescimento profissional.</li>
+                    <li>Lazer e Cultura: Museus, teatros, cinemas e eventos culturais.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Gostaria de saber mais sobre esta jornada ou compartilhar sua própria experiência? Entre em contato conosco!</p>
+                <form action="#">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Do Campo à Cidade. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
